@@ -1,0 +1,122 @@
+import { FilamentOption, PrinterEcosystem } from '../types/cad';
+
+export const FILAMENT_PRESETS: FilamentOption[] = [
+  {
+    id: 'pla',
+    name: 'PLA (Polylactic Acid)',
+    category: 'Standard',
+    density: 1.24,
+    nozzleTemp: 215,
+    bedTemp: 55,
+    enclosureRequired: false,
+    hardenedNozzleRequired: false,
+    color: '#06b6d4', // cyan
+    description: 'Crisp detailing, minimal warping, excellent for prototyping and cosmetic models.',
+  },
+  {
+    id: 'petg',
+    name: 'PETG',
+    category: 'Engineering',
+    density: 1.27,
+    nozzleTemp: 240,
+    bedTemp: 75,
+    enclosureRequired: false,
+    hardenedNozzleRequired: false,
+    color: '#3b82f6', // blue
+    description: 'High impact strength, UV resistant, semi-flexible toughness, food-safe grade options.',
+  },
+  {
+    id: 'abs_asa',
+    name: 'ABS / ASA',
+    category: 'Engineering / Outdoor',
+    density: 1.05,
+    nozzleTemp: 255,
+    bedTemp: 100,
+    chamberTemp: 50,
+    enclosureRequired: true,
+    hardenedNozzleRequired: false,
+    color: '#f59e0b', // amber
+    description: 'High heat deflection (95°C+), weather/UV resistant (ASA), acetone smoothable.',
+  },
+  {
+    id: 'tpu_95a',
+    name: 'TPU 95A (Elastomer)',
+    category: 'Flexible',
+    density: 1.21,
+    nozzleTemp: 230,
+    bedTemp: 45,
+    enclosureRequired: false,
+    hardenedNozzleRequired: false,
+    color: '#10b981', // emerald
+    description: 'Rubber-like flexibility, tear resistance, shock absorption for gaskets and bumpers.',
+  },
+  {
+    id: 'pc',
+    name: 'PC (Polycarbonate)',
+    category: 'High-Temp / Impact',
+    density: 1.20,
+    nozzleTemp: 285,
+    bedTemp: 110,
+    chamberTemp: 60,
+    enclosureRequired: true,
+    hardenedNozzleRequired: false,
+    color: '#8b5cf6', // purple
+    description: 'Extreme thermal resistance (110°C+) and mechanical toughness for heavy loads.',
+  },
+  {
+    id: 'pa_cf',
+    name: 'PA-CF (Nylon Carbon Fiber)',
+    category: 'Composite',
+    density: 1.15,
+    nozzleTemp: 290,
+    bedTemp: 90,
+    chamberTemp: 55,
+    enclosureRequired: true,
+    hardenedNozzleRequired: true,
+    color: '#ef4444', // red
+    description: 'Ultra-stiff structural composite, vibration damping, exceptional stiffness-to-weight ratio.',
+  },
+];
+
+export const PRINTER_ECOSYSTEMS: PrinterEcosystem[] = [
+  {
+    id: 'bambu',
+    brand: 'Bambu Lab',
+    popularModels: ['X1-Carbon', 'P1S', 'P1P', 'A1', 'A1 mini'],
+    bedX: 256,
+    bedY: 256,
+    bedZ: 256,
+    slicerName: 'Bambu Studio / OrcaSlicer',
+    enclosedDefault: true,
+  },
+  {
+    id: 'prusa',
+    brand: 'Prusa Research',
+    popularModels: ['Original Prusa MK4', 'Prusa XL (Toolchanger)', 'Prusa MINI+'],
+    bedX: 250,
+    bedY: 210,
+    bedZ: 220,
+    slicerName: 'PrusaSlicer',
+    enclosedDefault: false,
+  },
+  {
+    id: 'voron',
+    brand: 'Voron / Klipper DIY',
+    popularModels: ['Voron 2.4 (350mm)', 'Voron Trident (300mm)', 'RatRig V-Core 3', 'Voron V0.2'],
+    bedX: 300,
+    bedY: 300,
+    bedZ: 300,
+    slicerName: 'OrcaSlicer / SuperSlicer',
+    enclosedDefault: true,
+  },
+  {
+    id: 'creality',
+    brand: 'Creality',
+    popularModels: ['K1 / K1 Max', 'Ender-3 V3 KE/SE', 'CR-10 SE'],
+    bedX: 220,
+    bedY: 220,
+    bedZ: 250,
+    slicerName: 'Creality Print / Cura',
+    enclosedDefault: false,
+  },
+];

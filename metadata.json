@@ -1,0 +1,6 @@
+{
+  "name": "CAD-Tagger",
+  "description": "Automated spec sheet, slicer profile, and asset tag generator for 3D printing makers selling on Printables, MakerWorld, Cults3D, and Thangs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
